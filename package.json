@@ -1,0 +1,11 @@
+{
+  "name": "meaningful-work",
+  "version": "1.0.0",
+  "description": "web based app that accepts LinkedIn profiles as inputs and makes a call to LinkedIns API and sends some response to the client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
