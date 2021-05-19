@@ -1,3 +1,5 @@
+import React from 'react';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -5,7 +7,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>Motivated Individuals</h1>
+      <div>
+        <h1>Motivated Individuals</h1>
+      </div>
       // <section>
       //   <ResponseContainer name='Motivated Individual' />
       // </section>
@@ -46,4 +50,4 @@ class Response extends React.Component {
   }
 }
 
-// export default App;
+export default App;

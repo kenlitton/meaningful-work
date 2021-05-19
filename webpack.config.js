@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './index.js',
-  mode: 'development',
+  mode: process.env.NODE_ENV,
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
@@ -24,5 +24,10 @@ module.exports = {
       }
     ]
   },
-
+  devServer: {
+    publicPath: '/build',
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
+  }
 }
