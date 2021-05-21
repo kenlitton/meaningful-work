@@ -1,5 +1,6 @@
 import React from 'react';
-// Client submits LinkedIn Profile --> fetch request from the React server to the Express server --> LinkedIn router handles the request and redirects to LinkedIn Auth page --> Client signs in and authorizes the use of her data --> redirect the client back to 
+
+// Client pastes LinkedIn Profile and clicks Submit --> fetch request from the React server to the Express server --> Express handles the request and redirects to LinkedIn Auth page --> Client signs in and authorizes the use of her data --> redirect the client back to landing page
 class Response extends React.Component {
   constructor(props) {
     super(props);
@@ -11,22 +12,20 @@ class Response extends React.Component {
     fetch('/api', {
       method: 'GET',
       mode:'no-cors',
-      // redirect: 'follow',
-      url: redirectLink
-      // response_type: 'code',
-      // client_id: '783r30tcqzt68i',
-      // redirect_uri: 'http://localhost:8080/src/',
-      // scope: 'r_liteprofile'
       // headers: {
-      //   'Access-Control-Allow-Origin': true
-      // }
+      //   // 'Content-Type': 'text/html',
+      //   'Access-Control-Allow-Origin' : "*",
+      //   'Access-Control-Allow-Credentials' : true
+      // },
+      // body: 
     })
-    .then(res => { console.log('response received ', res.json()); })
-    .then(fetch('https://api.linkedin.com/v2/me', {
-      method: 'GET',
-      mode:'no-cors',
-    }))
     .then(res => console.log('retrieving member profile', res))
+    .then(
+    (req, res) => {
+      console.log('fetch auth code');
+      fetch('https://api.linkedin.com/v2/me');
+    })
+    .catch(err => console.log(err));
     // .then(res => {
     //   this.setState({
     //   })

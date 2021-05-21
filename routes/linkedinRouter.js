@@ -7,3 +7,5 @@ const router = express.Router();
 const linkedinController = {};
 
 // router.get((req, res) => console.log('we made to the router'));
+
+// export default linkedinController;

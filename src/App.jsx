@@ -1,6 +1,7 @@
 import React from 'react';
 import ResponseCreator from './components/ResponseCreator.jsx';
 import ResponseContainer from './containers/ResponseContainer.jsx';
+import logo from './assets/purposeful-work.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <img src={logo} alt='purposeful work welcoming image'></img>
         <ResponseCreator 
           receiveProfile={this.receiveProfile} 
           sendProfile={this.sendProfile}/>

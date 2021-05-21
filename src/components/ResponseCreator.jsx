@@ -10,7 +10,7 @@ class ResponseCreator extends React.Component {
   render() {
     return (
       <div>
-        <label for='linkedin-profile-input'>Please paste your LinkedIn profile here</label>
+        <label htmlFor='linkedin-profile-input'>Please paste your LinkedIn profile here</label>
         <br></br>
         <input 
           type='text' 
@@ -21,6 +21,8 @@ class ResponseCreator extends React.Component {
           id='submit' 
           value='See Similar People'
           onClick={this.props.sendProfile}></input>
+          <a href='https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=783r30tcqzt68i&redirect_uri=http://localhost:8080/&scope=r_liteprofile'>CLICK ME
+          </a>
       </div>
     );
   }
